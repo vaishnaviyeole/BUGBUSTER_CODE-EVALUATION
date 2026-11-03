@@ -1,0 +1,275 @@
+
+/* =========================================
+   FACULTY AI EVALUATION PAGE
+========================================= */
+
+.evaluation-page {
+  min-height: 100vh;
+  padding: 32px 40px;
+  background: #f4f7fc;
+  color: #1e293b;
+  font-family: inherit;
+}
+
+/* =========================================
+   HEADER
+========================================= */
+
+.evaluation-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 28px;
+}
+
+.evaluation-header h1 {
+  color: #172554;
+  font-size: 28px;
+  font-weight: 750;
+  margin-bottom: 7px;
+  letter-spacing: -0.5px;
+}
+
+.evaluation-header p {
+  color: #64748b;
+  font-size: 14px;
+}
+
+.evaluation-page .back-btn {
+  padding: 11px 20px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #2563eb, #4f46e5);
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+.evaluation-page .back-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 7px 16px rgba(37, 99, 235, 0.2);
+}
+
+/* =========================================
+   TABLE CONTAINER
+========================================= */
+
+.table-container {
+  width: 100%;
+  padding: 20px;
+  background: #ffffff;
+  border: 1px solid #e8edf5;
+  border-radius: 15px;
+  overflow-x: auto;
+  box-shadow: 0 4px 15px rgba(15, 23, 42, 0.04);
+}
+
+/* =========================================
+   EVALUATION TABLE
+========================================= */
+
+.evaluation-table {
+  width: 100%;
+  min-width: 850px;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+.evaluation-table th {
+  padding: 15px 16px;
+  background: #eff6ff;
+  color: #1e40af;
+  text-align: left;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  white-space: nowrap;
+}
+
+.evaluation-table th:first-child {
+  border-radius: 9px 0 0 9px;
+}
+
+.evaluation-table th:last-child {
+  border-radius: 0 9px 9px 0;
+}
+
+.evaluation-table td {
+  padding: 15px 16px;
+  color: #475569;
+  font-size: 13px;
+  line-height: 1.6;
+  border-bottom: 1px solid #edf1f6;
+  vertical-align: middle;
+}
+
+.evaluation-table tbody tr {
+  transition: background 0.2s ease;
+}
+
+.evaluation-table tbody tr:hover {
+  background: #f8faff;
+}
+
+.evaluation-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* Student and Assignment */
+
+.evaluation-table td:first-child {
+  color: #1e293b;
+  font-weight: 650;
+  min-width: 120px;
+}
+
+.evaluation-table td:nth-child(2) {
+  color: #334155;
+  font-weight: 550;
+  min-width: 150px;
+}
+
+/* Language */
+
+.evaluation-table td:nth-child(3) {
+  color: #64748b;
+  font-weight: 600;
+}
+
+/* Status */
+
+.evaluation-table td:nth-child(4) {
+  font-weight: 650;
+}
+
+/* Marks */
+
+.evaluation-table td:nth-child(5) {
+  color: #2563eb;
+  font-weight: 750;
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+/* Feedback */
+
+.evaluation-table td:nth-child(6) {
+  max-width: 280px;
+  min-width: 180px;
+  color: #64748b;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+/* Action */
+
+.evaluation-table td:last-child {
+  min-width: 115px;
+}
+
+/* =========================================
+   EVALUATE BUTTON
+========================================= */
+
+.evaluation-page .evaluate-btn {
+  padding: 9px 17px;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #059669, #10b981);
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 650;
+  cursor: pointer;
+  transition: 0.25s ease;
+  white-space: nowrap;
+}
+
+.evaluation-page .evaluate-btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 12px rgba(16, 185, 129, 0.2);
+}
+
+/* Evaluated Button */
+
+.evaluation-page .evaluate-btn:disabled {
+  background: #dcfce7;
+  color: #15803d;
+  cursor: not-allowed;
+  opacity: 1;
+  box-shadow: none;
+  transform: none;
+}
+
+/* =========================================
+   LOADING AND EMPTY ROWS
+========================================= */
+
+.evaluation-table tbody td[colspan="7"] {
+  padding: 45px 15px;
+  text-align: center;
+  color: #64748b;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* =========================================
+   SCROLLBAR
+========================================= */
+
+.table-container::-webkit-scrollbar {
+  height: 7px;
+}
+
+.table-container::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 10px;
+}
+
+.table-container::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+/* =========================================
+   TABLET RESPONSIVE
+========================================= */
+
+@media (max-width: 900px) {
+  .evaluation-page {
+    padding: 25px;
+  }
+
+  .table-container {
+    padding: 15px;
+  }
+}
+
+/* =========================================
+   MOBILE RESPONSIVE
+========================================= */
+
+@media (max-width: 600px) {
+  .evaluation-page {
+    padding: 18px 14px;
+  }
+
+  .evaluation-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .evaluation-header h1 {
+    font-size: 23px;
+  }
+
+  .evaluation-page .back-btn {
+    width: 100%;
+  }
+
+  .table-container {
+    padding: 12px;
+  }
+}
